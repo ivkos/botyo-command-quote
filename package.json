@@ -1,0 +1,48 @@
+{
+  "name": "botyo-command-quote",
+  "version": "2.0.0-alpha.1",
+  "description": "Quote command for Botyo",
+  "keywords": [
+    "botyo",
+    "module",
+    "extension",
+    "command",
+    "quote",
+    "markov",
+    "chains"
+  ],
+  "main": "build/QuoteCommand.js",
+  "types": "build/QuoteCommand.d.ts",
+  "scripts": {
+    "prebuild": "rimraf build/",
+    "build": "tsc -p .",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivkos/botyo-command-quote.git"
+  },
+  "author": {
+    "name": "Ivaylo Stoyanov",
+    "email": "me@ivkos.com",
+    "url": "https://github.com/ivkos"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ivkos/botyo-command-quote/issues"
+  },
+  "homepage": "https://github.com/ivkos/botyo-command-quote#readme",
+  "dependencies": {
+    "botyo-api": "^2.0.0-alpha.14",
+    "inversify": "^4.6.0",
+    "markovski": "^1.5.2"
+  },
+  "devDependencies": {
+    "@types/mongodb": "^2.2.16",
+    "rimraf": "^2.6.2",
+    "typescript": "^2.6.2"
+  },
+  "engines": {
+    "node": ">=6.5.0"
+  }
+}
