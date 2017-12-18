@@ -64,7 +64,7 @@ export default class QuoteCommand extends CommandModule
             return this.api.sendMessage(threadId, "Literally who?");
         }
 
-        if (quoteeId === this.api.getCurrentUserId()) {
+        if (quoteeId == this.api.getCurrentUserId()) {
             return this.api.sendMessage(threadId, "\u{1F635}");
         }
 
