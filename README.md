@@ -5,6 +5,17 @@
 
 The **Quote Command for [Botyo](https://github.com/ivkos/botyo)** uses Markov chains to generate quotes based on messages sent by the participants of a chat thread.
 
+## Usage
+`#quote [ <person> | me | all [ on <subject> ] ]`
+
+For example:
+- `#quote Alice` - Generates a quote by Alice.
+- `#quote me` or simply `#quote` - Quotes the sender of the message.
+- `#quote all` or `#quote *` - Builds a Markov chain based on all but the bot's messages in the chat, and generates an anonymous quote.
+- `#quote me on JavaScript` - Generates a quote by the sender starting with 'JavaScript'.
+- `#quote Alice on cats` - Generates a quote by Alice starting with 'cats'.
+- `#quote all on the bot` - Generates a quote based on all messages, starting with 'the bot'.
+
 ## Requirements
 * [Persistence Bundle](https://github.com/ivkos/botyo-bundle-persistence) - must be configured and enabled to store the messages in the database, since the Quote Command generates sentences based on messages in DB in order to avoid downloading the entire chat history on every command invocation.
 
@@ -16,7 +27,7 @@ The **Quote Command for [Botyo](https://github.com/ivkos/botyo)** uses Markov ch
 **Step 2.** Register the module.
 ```typescript
 import Botyo from "botyo";
-import { QuoteCommand } from "botyo-command-quote"
+import QuoteCommand from "botyo-command-quote"
 
 Botyo.builder()
     ...
