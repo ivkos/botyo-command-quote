@@ -1,9 +1,9 @@
-import { ChatApi, CommandModule, FacebookId, Message, MongoDb } from "botyo-api";
+import { AbstractCommandModule, ChatApi, FacebookId, Message, MongoDb } from "botyo-api";
 import { inject } from "inversify";
 
 const Markovski = require("markovski");
 
-export default class QuoteCommand extends CommandModule
+export default class QuoteCommand extends AbstractCommandModule
 {
     private readonly api: ChatApi;
     private readonly prefix: string;
@@ -15,7 +15,7 @@ export default class QuoteCommand extends CommandModule
     private readonly censorshipRegex: RegExp;
     private readonly censorshipMaxRetries: number;
 
-    constructor(@inject(MongoDb) private readonly db: any)
+    constructor(@inject(MongoDb.SYMBOL) private readonly db: MongoDb)
     {
         super();
 
