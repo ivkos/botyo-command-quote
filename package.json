@@ -1,6 +1,6 @@
 {
   "name": "botyo-command-quote",
-  "version": "2.0.0-alpha.4",
+  "version": "2.0.0",
   "description": "Quote command for Botyo",
   "keywords": [
     "botyo",
@@ -33,14 +33,14 @@
   },
   "homepage": "https://github.com/ivkos/botyo-command-quote#readme",
   "dependencies": {
-    "botyo-api": "^2.0.0-alpha.31",
-    "inversify": "^4.6.0",
+    "botyo-api": "^2.0.1",
+    "inversify": "^4.13.0",
     "markovski": "^1.5.2"
   },
   "devDependencies": {
-    "@types/mongodb": "^2.2.18",
+    "@types/mongodb": "^2.2.20",
     "rimraf": "^2.6.2",
-    "typescript": "^2.6.2"
+    "typescript": "^2.9.1"
   },
   "engines": {
     "node": ">=6.5.0"
